@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informasi Tentang War Thunder</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+header {
+    background-color:#333;
+    color: #fff;
+    padding: 20px 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.section {
+    padding: 50px 0;
+    text-align: center;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+form input, form textarea {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Informasi Tentang War Thunder</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#about">Tentang Game</a></li>
+                    <li><a href="#services">Fitur</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="section">
+        <div class="container">
+            <h2>Selamat Datang di Halaman Informasi War Thunder</h2>
+            <p>Temukan segala informasi yang Anda butuhkan tentang permainan War Thunder di sini.</p>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Tentang War Thunder</h2>
+            <p>War Thunder adalah sebuah permainan video multipemain daring yang dikembangkan oleh Gaijin Entertainment. Permainan ini menawarkan pengalaman bermain yang intens dalam pertempuran militer dari era Perang Dunia II dan beberapa periode setelahnya.</p>
+            <p>Pemain dapat memilih untuk bermain sebagai anggota dari salah satu dari tiga kekuatan besar yang terlibat dalam konflik tersebut: Sekutu, Poros, atau Sekutu Jepang. Permainan ini menampilkan berbagai jenis kendaraan tempur, termasuk pesawat terbang, tank, dan kapal perang.</p>
+            <p>Dengan grafis yang memukau dan fisika yang realistis, War Thunder menyajikan pengalaman bermain yang mendalam bagi para penggemar sejarah militer dan penggemar permainan aksi.</p>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Fitur Permainan</h2>
+            <ul>
+                <li>Multiplayer online dengan pemain dari seluruh dunia.</li>
+                <li>Pilihan kendaraan tempur dari berbagai negara dan era.</li>
+                <li>Pertempuran udara, darat, dan laut yang dinamis.</li>
+                <li>Grafis berkualitas tinggi dan suara yang realistis.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <form id="contactForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Pesan:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" id="submitBtn">Kirim</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Informasi War Thunder</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Lakukan sesuatu dengan data formulir (misalnya, kirim ke server atau tampilkan pesan sukses)
+            console.log("Nama: " + name + ", Email: " + email + ", Pesan: " + message);
+
+            // Tombol kirim akan berubah menjadi "Mengirim..."
+            document.getElementById("submitBtn").innerText = "Mengirim...";
+
+            // Simulasi pengiriman data dengan setTimeout
+            setTimeout(function() {
+                // Lakukan sesuatu dengan data formulir (misalnya, kirim ke server atau tampilkan pesan sukses)
+                console.log("Nama: " + name + ", Email: " + email + ", Pesan: " + message);
+
+                // Setelah pengiriman data selesai, tombol kirim akan kembali menjadi "Kirim"
+                document.getElementById("submitBtn").innerText = "Kirim";
+
+                // Reset formulir
+                document.getElementById("contactForm").reset();
+            }, 2000); // Contoh pengiriman data dalam 2 detik
+        });
+    </script>
+</body>
+</html>
